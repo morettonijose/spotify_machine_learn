@@ -1,4 +1,4 @@
-# Spotify Machine Learn project
+# Spotify Machine learning project
 
 Dataset URL : https://raw.githubusercontent.com/morettonijose/spotify_machine_learn/refs/heads/main/spotify_songs.csv 
 
