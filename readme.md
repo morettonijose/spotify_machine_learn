@@ -44,6 +44,6 @@ Para garantir o funcionamento correto da aplicação execute o seguinte procedim
 
 6.1 ) no terminal digite : python3 -m http.server 8100
 
-6.2) então acesse a url : http://localhost:8100/frontend/index.html
+6.2) então acesse a url : http://localhost:8100/ 
 
 
