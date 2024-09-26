@@ -38,6 +38,12 @@ certifique-se que seu servidor backend está ativo na respectiva URL : http://12
 
 ###  6. Acesse a URL Do frontend para simular uma nova previsão de popularidade
 
-Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, acesse o link do frontend e abra o arquivo index.html para simular a predição da popularidade de uma nova música. 
+Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, acesse o diretório frontend .
+
+Para garantir o funcionamento correto da aplicação execute o seguinte procedimento ao invés de abrir diretamente o arquivo index.html : 
+
+6.1 ) no terminal digite : python3 -m http.server 8100
+
+6.2) então acesse a url : http://localhost:8100/frontend/index.html
 
 
