@@ -1,4 +1,4 @@
-#spotify_machine_learn
+# Spotify Machine Learn project
 
 Dataset URL : https://raw.githubusercontent.com/morettonijose/spotify_machine_learn/refs/heads/main/spotify_songs.csv 
 
@@ -6,10 +6,7 @@ Google Colab Notebook : https://colab.research.google.com/drive/11iOcSP239T62tir
 
 # Spotify Popularity Predictor
 
-Este projeto é uma API baseada em Flask para prever a popularidade de músicas usando características como `danceability`, `energy`, `tempo`, entre outras.
-
-# Como Configurar
-
+Este projeto é uma API baseada em Flask para prever a popularidade de músicas usando características como `danceability`, `energy`, `tempo`, entre outras, com base no dataset de músicas de sucesso da plataforma exemplificado no Google Colab Notebook acima .
 
 ## INSTALAÇÃO : 
 
