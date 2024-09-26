@@ -26,10 +26,10 @@ pip install -r requirements.txt
 ###  4. Rodando o Backeend  : acesse via terminal a pasta backend e inicie o servidor backend. 
 python app.py
 
-###  6. Acesse a interface do Swagger
+###  5. Acesse a interface do Swagger
 certifique-se que seu servidor backend está ativo na respectiva URL : http://127.0.0.1:5000/swagger/#/Prediction
 
-###  5. Acesse a URL Do frontend para simular uma nova previsão de popularidade
+###  6. Acesse a URL Do frontend para simular uma nova previsão de popularidade
 Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, acesse o link do frontend e abra o arquivo index.html para simular a predição da popularidade de uma nova música. 
 
 
