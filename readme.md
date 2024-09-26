@@ -1,6 +1,6 @@
 # Spotify Machine learning project
 
-Dataset URL : https://raw.githubusercontent.com/morettonijose/spotify_machine_learn/refs/heads/main/spotify_songs.csv 
+Dataset URL : https://raw.githubusercontent.com/morettonijose/spotify_machine_learning/refs/heads/main/spotify_songs.csv 
 
 Google Colab Notebook (Treinamento e escolha do modelo) : https://colab.research.google.com/drive/11iOcSP239T62tirEXc4QXGUOZy1K4mRY#scrollTo=0Quuwcmji3up
 
