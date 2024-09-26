@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alterar align-items para flex-start */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px; /* Adicionar margem superior para afastar o conteúdo do topo */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#errorMessages p {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#prediction {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold; 
+}
+
+ 
+    /* Estilo básico para erros */
+    .error {
+        color: red;
+        margin-top: 10px;
+    }
+
+    /* Estilo para popularidade */
+    p.popular {
+        color: blue;
+    }
+
+    p.not-popular {
+        color: red;
+    }
+

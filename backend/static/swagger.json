@@ -1,0 +1,141 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API para predição de popularidade de músicas usando características extraídas do Spotify.",
+    "version": "1.0.0",
+    "title": "Spotify Popularity Predictor API"
+  },
+  "host": "127.0.0.1:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/predict": {
+      "post": {
+        "tags": ["Prediction"],
+        "summary": "Prediz a popularidade de uma música com base nas características fornecidas.",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Características da música para predição.",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "danceability": {
+                  "type": "number",
+                  "example": 0.7
+                },
+                "energy": {
+                  "type": "number",
+                  "example": 0.8
+                },
+                "tempo": {
+                  "type": "number",
+                  "example": 120
+                },
+                "loudness": {
+                  "type": "number",
+                  "example": -5.5
+                },
+                "acousticness": {
+                  "type": "number",
+                  "example": 0.1
+                },
+                "speechiness": {
+                  "type": "number",
+                  "example": 0.05
+                },
+                "valence": {
+                  "type": "number",
+                  "example": 0.9
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Predição realizada com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "prediction": {
+                  "type": "integer",
+                  "description": "Classe de popularidade (1 para popular, 0 para não popular)",
+                  "example": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fetch_spotify_data": {
+      "post": {
+        "tags": ["Spotify Data"],
+        "summary": "Busca as características de uma música a partir da URL do Spotify.",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "URL da música do Spotify.",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "example": "https://open.spotify.com/track/3QpkDyuXdjxhIyLyKtyC6O"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Características da música retornadas com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "danceability": {
+                  "type": "number"
+                },
+                "energy": {
+                  "type": "number"
+                },
+                "tempo": {
+                  "type": "number"
+                },
+                "loudness": {
+                  "type": "number"
+                },
+                "acousticness": {
+                  "type": "number"
+                },
+                "speechiness": {
+                  "type": "number"
+                },
+                "valence": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "URL inválida ou mal formatada"
+          },
+          "500": {
+            "description": "Erro ao buscar os dados do Spotify"
+          }
+        }
+      }
+    }
+  }
+}

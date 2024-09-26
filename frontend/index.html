@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!--
+    PARA RODAR CORRETAMENTE E TESTAR A API DO SPOTIFY RODE ESTE HTML EM SERVIDOR AO INVES DE ABRIR DIRETAMENTE O ARQUIVO. 
+    no terminal digite : python3 -m http.server 8100
+    então acesse a url : http://localhost:8100/frontend/index.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predição de Popularidade da Música</title>
+
+    <!-- Importar o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+   
+</head>  
+<body>
+    <div class="container">
+
+        <h1>Spotify Popularity Predictor</h1>
+
+        <!-- Campo para o usuário inserir a URL da música -->
+        <label for="musicUrl">URL da Música no Spotify:</label>
+        <input type="text" id="musicUrl" placeholder="Insira a URL da música">
+        <small>ex: https://open.spotify.com/track/3QpkDyuXdjxhIyLyKtyC6O</small>
+        <button id="fillButton">Buscar Informações da faixa</button>
+        <!-- Div para exibir o erro de preenchimento automático -->
+        <div id="fetchError" class="error"></div>
+
+
+        <small><br/>ou se preferir preencha manualmente as informações abaixo : </small>
+
+
+
+        <form id="predictionForm">
+            <label for="danceability">Danceability (0 a 1):</label>
+            <input type="number" id="danceability" step="0.001" min="0" max="1" required>
+            <small>Esse critério descreve quão dançante é a faixa.</small> 
+
+            <label for="energy">Energy (0 a 1):</label>
+            <input type="number" id="energy" step="0.001" min="0" max="1" required>
+            <small>O indicador energy é uma medida de intensidade e atividade de uma faixa musical.</small>
+
+            <label for="tempo">Tempo (60 a 200 BPM):</label>
+            <input type="number" id="tempo" step="0.001" min="60" max="200" required>
+            <small>Representa a velocidade ou ritmo da música.</small>
+
+            <label for="loudness">Loudness (-60 a 0 dB):</label>
+            <input type="number" id="loudness" step="0.001" min="-60" max="0" required>
+            <small>Refere-se ao nível de compressão da faixa musical.</small>
+
+            <label for="acousticness">Acousticness (0 a 1):</label>
+            <input type="number" id="acousticness" step="0.001" min="0" max="1" required>
+            <small>Mostra se a faixa é totalmente acústica ou não.</small>
+
+            <label for="speechiness">Speechiness (0 a 1):</label>
+            <input type="number" id="speechiness" step="0.001" min="0" max="1" required>
+            <small>Métrica para avaliar a proporção de palavras ditas na faixa.</small>
+
+            <label for="valence">Valence (0 a 1):</label>
+            <input type="number" id="valence" step="0.001" min="0" max="1" required>
+            <small>Métrica para medir o quanto uma música parece feliz.</small>
+
+            <button type="submit">Consultar Previsão de Popularidade</button>
+        </form>
+
+        <!-- Div para exibir o erro de previsão -->
+        <div id="predictionError" class="error"></div>
+
+        <!-- Exibição do resultado da previsão -->
+        <p id="prediction"></p>
+    </div>
+
+    <!-- Importar o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
