@@ -6,7 +6,7 @@ Google Colab Notebook (Treinamento e escolha do modelo) : https://colab.research
 
 # Spotify Popularity Predictor
 
-Este projeto é uma API baseada em Flask para prever a popularidade de músicas usando características como `danceability`, `energy`, `tempo`, entre outras, com base no dataset de músicas de sucesso da plataforma exemplificado no Google Colab Notebook acima .
+Este projeto é uma API baseada em Flask para prever a popularidade de músicas usando características como `danceability`, `energy`, `tempo`, entre outras, com base em um  dataset de músicas de sucesso da plataforma  .
 
 ## INSTALAÇÃO : 
 
