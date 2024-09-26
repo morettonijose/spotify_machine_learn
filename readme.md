@@ -16,6 +16,8 @@ git clone https://github.com/morettonijose/spotify_machine_learn.git
 
 cd spotify_machine_learn
 
+cd backend
+
 ### 2. Crie e ative um ambiente virtual via bash (opcional, mas recomendado)
 
 python -m venv venv
@@ -38,9 +40,10 @@ certifique-se que seu servidor backend está ativo na respectiva URL : http://12
 
 ###  6. Acesse a URL Do frontend para simular uma nova previsão de popularidade
 
-Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, acesse o diretório frontend .
+Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, abra uma nova janela do terminal e acesse novamente o diretório spotify_machine_learn, e então o diretório frontend do projeto . No terminal digite :
 
-Para garantir o funcionamento correto da aplicação execute o seguinte procedimento ao invés de abrir diretamente o arquivo index.html : 
+cd frontend
+
 
 6.1 ) no terminal digite : python3 -m http.server 8100
 
