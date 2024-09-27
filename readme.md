@@ -54,7 +54,7 @@ cd frontend
 ###  Extras : 
 
 
-Observação 1 )  Para fins de simplificação e facilitação  de testes  serão retornado  valores aleatórios para as caracteristicas das músicas de qualquer URL inputada no campo correspondente da interface. 
+Observação 1 )  Para fins de simplificação e facilitação  de testes  serão retornado  valores aleatórios para as caracteristicas das músicas de qualquer URL inputada  na interface. 
     
 
 Observação 2 ) Se você deseja testar a função de buscar as caracteristicas de uma música através da URL, usando a  API do Spotify, você só precisa configurar o arquivo .env com suas credenciais do Spotify Developes, substituindo XXX pelas respectivas credenciais conforme exemplo a seguir : 
