@@ -92,18 +92,7 @@ def get_audio_features(track_id):
         return response.json()
     else:
         raise Exception("Falha ao consultar a API do Spotify")
-
-class Predict(Resource):
-    def post(self):
-        """
-        Realiza a predição da popularidade da música baseado nas características enviadas.
-        """
-        dados = request.get_json()
-        entrada = np.array([dados['danceability'], dados['energy'], dados['tempo'],
-                            dados['loudness'], dados['acousticness'], dados['speechiness'],
-                            dados['valence']]).reshape(1, -1)
-        predicao = modelo.predict(entrada)
-        return jsonify({'prediction': int(predicao[0])})
+    
 
 class FetchSpotifyData(Resource):
     def post(self):
@@ -136,6 +125,20 @@ class FetchSpotifyData(Resource):
         except Exception as e:
             # Retornar valores randômicos no caso de falha
             return make_response(gerar_valores_randomicos(), 500)
+        
+        
+class Predict(Resource):
+    def post(self):
+        """
+        Realiza a predição da popularidade da música baseado nas características enviadas.
+        """
+        dados = request.get_json()
+        entrada = np.array([dados['danceability'], dados['energy'], dados['tempo'],
+                            dados['loudness'], dados['acousticness'], dados['speechiness'],
+                            dados['valence']]).reshape(1, -1)
+        predicao = modelo.predict(entrada)
+        return jsonify({'prediction': int(predicao[0])})
+    
 
 # Adicionar rotas à API
 api.add_resource(Predict, '/predict')

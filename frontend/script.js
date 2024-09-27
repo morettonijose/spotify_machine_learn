@@ -55,6 +55,22 @@ document.getElementById('fillButton').addEventListener('click', async function (
     const musicUrl = document.getElementById('musicUrl').value;
     const fetchErrorElement = document.getElementById('fetchError');
 
+    // Limpar mensagens de erro anteriores
+    fetchErrorElement.textContent = '';
+    
+    // Validação para verificar se o campo URL não está vazio e contém o padrão "track/"
+    if (!musicUrl) {
+        fetchErrorElement.textContent = 'A URL da música não pode estar vazia.';
+        return;
+    }
+
+    if (!musicUrl.includes('track/')) {
+        fetchErrorElement.textContent = 'A URL deve estar no formato correto e conter "track/". Exemplo: https://open.spotify.com/track/3QpkDyuXdjxhIyLyKtyC6O';
+        return;
+    }
+
+
+
     try {
         const response = await fetch('http://127.0.0.1:5000/fetch_spotify_data', {
             method: 'POST',
