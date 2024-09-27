@@ -25,7 +25,6 @@ modelo = joblib.load('best_knn_model.pkl')
 #modelo = joblib.load('best_decision_tree_model.pkl')
 
 
-
 # Configuração do Swagger UI
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
