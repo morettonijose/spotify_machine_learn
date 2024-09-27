@@ -1,6 +1,11 @@
 document.getElementById('predictionForm').addEventListener('submit', async function (e) {
     e.preventDefault();  // Prevenir o comportamento padrão do formulário
 
+
+    const predictionElement = document.getElementById('prediction');
+    predictionElement.textContent = '';
+
+
     const danceability = parseFloat(document.getElementById('danceability').value);
     const energy = parseFloat(document.getElementById('energy').value);
     const tempo = parseFloat(document.getElementById('tempo').value);
@@ -22,10 +27,10 @@ document.getElementById('predictionForm').addEventListener('submit', async funct
             body: JSON.stringify(data)
         });
 
+
         if (response.ok) {
             const result = await response.json();
-            const predictionElement = document.getElementById('prediction');
-
+          
             // Remover classes anteriores
             predictionElement.classList.remove('popular', 'not-popular');
 

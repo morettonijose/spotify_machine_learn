@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Popularity Predictor</title>
 
     <!-- Importar o arquivo CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -14,7 +13,6 @@
 <body>
     <div class="container">
 
-        <h1>Spotify Popularity Predictor</h1>
 
         <p class="align-center">Consulte o prognóstico de popularidade de uma música na plataforma Spotify com base em suas características.<br/> <br/>  </p>
 
@@ -31,31 +29,24 @@
         <form id="predictionForm">
             <label for="danceability">Danceability (0 a 1):</label>
             <input type="number" id="danceability" step="0.001" min="0" max="1" required>
-            <small>Esse critério descreve quão dançante é a faixa.</small> 
 
             <label for="energy">Energy (0 a 1):</label>
             <input type="number" id="energy" step="0.001" min="0" max="1" required>
-            <small>O indicador energy é uma medida de intensidade e atividade de uma faixa musical.</small>
 
             <label for="tempo">Tempo (60 a 200 BPM):</label>
             <input type="number" id="tempo" step="0.001" min="60" max="200" required>
-            <small>Representa a velocidade ou ritmo da música.</small>
 
             <label for="loudness">Loudness (-60 a 0 dB):</label>
             <input type="number" id="loudness" step="0.001" min="-60" max="0" required>
-            <small>Refere-se ao nível de compressão da faixa musical.</small>
 
             <label for="acousticness">Acousticness (0 a 1):</label>
             <input type="number" id="acousticness" step="0.001" min="0" max="1" required>
-            <small>Mostra se a faixa é totalmente acústica ou não.</small>
 
             <label for="speechiness">Speechiness (0 a 1):</label>
             <input type="number" id="speechiness" step="0.001" min="0" max="1" required>
-            <small>Métrica para avaliar a proporção de palavras ditas na faixa.</small>
 
             <label for="valence">Valence (0 a 1):</label>
             <input type="number" id="valence" step="0.001" min="0" max="1" required>
-            <small>Métrica para medir o quanto uma música parece feliz.</small>
 
             <button type="submit">Consultar Previsão de Popularidade</button>
         </form>
