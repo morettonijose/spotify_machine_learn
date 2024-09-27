@@ -20,36 +20,25 @@ cd spotify_machine_learn
 
 cd backend
 
-### 2. Crie e ative um ambiente virtual via bash (opcional, mas recomendado)
 
-Observação : Em algumas configurações de ambiente você deverá usar os códigos de comando pip3 e python3 ao invés de pip e python. 
-
-No terminal digite :
-
-python -m venv venv
-
-source venv/bin/activate  # Para Linux/Mac
-
-venv\Scripts\activate  # Para Windows
-
-###  3. Instale as dependências via bash
+###  2. Instale as dependências via bash
 
 No terminal digite :
 
 pip install -r requirements.txt
 
-###  4. Rodando o Backeend  : acesse via terminal a pasta backend e inicie o servidor backend. 
+###  3. Rodando o Backeend  : acesse via terminal a pasta backend e inicie o servidor backend. 
 
 No terminal digite :
 
 python app.py
 
-###  5. Acesse a interface do Swagger
+###  4. Acesse a interface do Swagger
 
 certifique-se que seu servidor backend está ativo na respectiva URL : http://127.0.0.1:5000/swagger/#/Prediction
 
 
-###  5.1 Pytest
+###  5 Pytest
 Para executar o script de teste, em seu terminal execute  :
 pytest test_model.py
 
@@ -72,10 +61,23 @@ cd frontend
 ###  Extras : 
 
 
-Observação 1 )  Para fins de simplificação e facilitação  de testes  serão retornado  valores aleatórios para as caracteristicas das músicas de qualquer URL inserida no campo de texto corrrespondente a URL . 
+Observação 1 ) Caso tenha erro nos procedimentos acima, considere criar  e ativar um ambiente virtual via bash (opcional)
+
+Observação : Em algumas configurações de ambiente você deverá usar os códigos de comando pip3 e python3 ao invés de pip e python. 
+
+No terminal digite :
+
+python -m venv venv
+
+source venv/bin/activate  # Para Linux/Mac
+
+venv\Scripts\activate  # Para Windows
+
+
+Observação 2)  Para fins de simplificação e facilitação  de testes  serão retornado  valores aleatórios para as caracteristicas das músicas de qualquer URL inserida no campo de texto corrrespondente a URL . 
     
 
-Observação 2 ) Se você deseja testar esta função usando a  API oficial do Spotify, basta configurar o arquivo .env com suas credenciais do Spotify Developes (https://developer.spotify.com/dashboard/), substituindo XXX pelas respectivas credenciais conforme exemplo a seguir : 
+Observação 3 ) Se você deseja testar esta função usando a  API oficial do Spotify, basta configurar o arquivo .env com suas credenciais do Spotify Developes (https://developer.spotify.com/dashboard/), substituindo XXX pelas respectivas credenciais conforme exemplo a seguir : 
 
 SPOTIFY_CLIENT_ID=XXX
 
