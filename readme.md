@@ -10,7 +10,7 @@ Este projeto é uma API baseada em Flask para prever a popularidade de músicas 
 
 ## INSTALAÇÃO : 
 
-### 1. Clone o repositório via bash
+### 1. Clone o repositório 
 
 No terminal digite :
 
@@ -21,7 +21,7 @@ cd spotify_machine_learn
 cd backend
 
 
-###  2. Instale as dependências via bash
+###  2. Instale as dependências 
 
 No terminal digite :
 
@@ -35,7 +35,7 @@ python app.py
 
 ###  4. Acesse a interface do Swagger
 
-certifique-se que seu servidor backend está ativo na respectiva URL : http://127.0.0.1:5000/swagger/#/Prediction
+certifique-se que seu servidor backend está ativo na respectiva URL : http://127.0.0.1:5000/swagger/
 
 
 ###  5 Pytest
