@@ -104,6 +104,9 @@ class FetchSpotifyData(Resource):
             track_url = body.get("url")
             track_id = get_spotify_track_id(track_url)
 
+            if  track_url =="" :
+                return make_response(gerar_valores_randomicos(), 200)
+
             if not track_id:
                 return jsonify({'error': 'URL inválida'}), 400
 
@@ -126,7 +129,7 @@ class FetchSpotifyData(Resource):
             # Retornar valores randômicos no caso de falha
             return make_response(gerar_valores_randomicos(), 500)
         
-        
+
 class Predict(Resource):
     def post(self):
         """
