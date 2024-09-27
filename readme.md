@@ -12,6 +12,8 @@ Este projeto é uma API baseada em Flask para prever a popularidade de músicas 
 
 ### 1. Clone o repositório via bash
 
+No terminal digite :
+
 git clone https://github.com/morettonijose/spotify_machine_learn.git
 
 cd spotify_machine_learn
@@ -22,6 +24,8 @@ cd backend
 
 Observação : Em algumas configurações de ambiente você deverá usar os códigos de comando pip3 e python3 ao invés de pip e python. 
 
+No terminal digite :
+
 python -m venv venv
 
 source venv/bin/activate  # Para Linux/Mac
@@ -30,9 +34,13 @@ venv\Scripts\activate  # Para Windows
 
 ###  3. Instale as dependências via bash
 
+No terminal digite :
+
 pip install -r requirements.txt
 
 ###  4. Rodando o Backeend  : acesse via terminal a pasta backend e inicie o servidor backend. 
+
+No terminal digite :
 
 python app.py
 
@@ -42,7 +50,9 @@ certifique-se que seu servidor backend está ativo na respectiva URL : http://12
 
 ###  6. Acesse a URL Do frontend para simular uma nova previsão de popularidade
 
-Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, abra uma nova janela do terminal e acesse novamente o diretório spotify_machine_learn, e então o diretório frontend do projeto . No terminal digite :
+Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, abra uma nova janela do terminal e acesse novamente o diretório spotify_machine_learn, e então o diretório frontend do projeto . 
+
+No terminal digite :
 
 cd frontend
 
