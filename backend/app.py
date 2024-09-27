@@ -19,10 +19,10 @@ api = Api(app)
 
 
 # Carregar o modelo de KNN
-#modelo = joblib.load('best_knn_model.pkl')
+modelo = joblib.load('best_knn_model.pkl')
 
 #usando modelo de arvore de decisão
-modelo = joblib.load('best_decision_tree_model.pkl')
+#modelo = joblib.load('best_decision_tree_model.pkl')
 
 
 

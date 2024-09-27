@@ -48,6 +48,12 @@ python app.py
 
 certifique-se que seu servidor backend está ativo na respectiva URL : http://127.0.0.1:5000/swagger/#/Prediction
 
+
+###  5.1 Pytest
+Para executar o script de teste, em seu terminal execute  :
+pytest test_model.py
+
+
 ###  6. Acesse a URL Do frontend para simular uma nova previsão de popularidade
 
 Uma vez que você teve sucesso em visualizar a interface de documentação do Swagger, abra uma nova janela do terminal e acesse novamente o diretório spotify_machine_learn, e então o diretório frontend do projeto . 

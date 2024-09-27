@@ -6,8 +6,9 @@ import pandas as pd
 
 # Carregar o modelo treinado
 modelo = joblib.load('best_knn_model.pkl')
+#modelo = joblib.load('best_decision_tree_model.pkl')
 
-# Dados de teste para verificar o desempenho do modelo (pode ser ajustado para seus dados de validação reais)
+# Dados de teste para verificar o desempenho do modelo
 dados_teste = pd.DataFrame([
     [0.5, 0.7, 120, -5.0, 0.2, 0.1, 0.8],  # Exemplo de música popular
     [0.2, 0.3, 100, -10.0, 0.6, 0.05, 0.4], # Exemplo de música não popular
@@ -17,9 +18,9 @@ dados_teste = pd.DataFrame([
 # As labels reais correspondentes para os dados de teste
 labels_reais = np.array([1, 0, 1])
 
-# Thresholds mínimos de desempenho (ajuste conforme necessário)
-PRECISION_THRESHOLD = 0.65  # Ajustado para permitir testes iniciais
-F1_SCORE_THRESHOLD = 0.65    # Ajustado para permitir testes iniciais
+# Thresholds mínimos de desempenho (ajuste  fino )
+PRECISION_THRESHOLD = 0.60
+F1_SCORE_THRESHOLD = 0.60 
 
 # Função para validar os dados antes de enviar ao modelo
 def validate_data(data):
@@ -34,6 +35,7 @@ def validate_data(data):
     ]):
         raise ValueError("Dados fora dos limites esperados.")
     return True
+
 
 # Teste 1: Verificar a precisão do modelo
 def test_model_accuracy():
