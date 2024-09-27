@@ -45,13 +45,13 @@ Uma vez que você teve sucesso em visualizar a interface de documentação do Sw
 cd frontend
 
 
-6.1 ) no terminal digite : python3 -m http.server 8100
+###  6.1 ) no terminal digite : python3 -m http.server 8100
 
-6.2) então acesse a url : http://localhost:8100/ 
+###  6.2) então acesse a url : http://localhost:8100/ 
 
 
 
-Extras :   : 
+###  Extras : 
 
 
 Observação 1 )  Para fins de simplificação e facilitação  de testes  serão retornado  valores aleatórios para as caracteristicas das músicas de qualquer URL inputada no campo correspondente da interface. 
