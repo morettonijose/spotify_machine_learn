@@ -49,15 +49,18 @@ cd frontend
 
 6.2) então acesse a url : http://localhost:8100/ 
 
-7 ) Opcional  : 
 
-7.1) Se você deseja testar a função de buscar as caracteristicas de uma música através da URL, usando a  API do Spotify, basta configurar o arquivo .env com suas credenciais do Spotify Developer conforme a seguir, substituindo XXX pelas respectivas credenciais  : 
+
+Extras :   : 
+
+
+Observação 1 )  Para fins de simplificação e facilitação  de testes  serão retornado  valores aleatórios para as caracteristicas das músicas de qualquer URL inputada no campo correspondente da interface. 
+    
+
+Observação 2 ) Se você deseja testar a função de buscar as caracteristicas de uma música através da URL, usando a  API do Spotify, você só precisa configurar o arquivo .env com suas credenciais do Spotify Developes, substituindo XXX pelas respectivas credenciais conforme exemplo a seguir : 
 
 SPOTIFY_CLIENT_ID=XXX
 
 SPOTIFY_CLIENT_SECRET=XXX
-
-7.2 ) Se você não configurar o arquivo .env , os valores serão preenchidos com valores aleatórios. 
-    
 
 
