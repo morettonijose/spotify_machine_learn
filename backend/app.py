@@ -17,8 +17,14 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": ["http://localhost:8100", "http://127.0.0.1"]}})  # Permite requisições de localhost:8100 e 127.0.0.1
 api = Api(app)
 
-# Carregar o modelo salvo
-modelo = joblib.load('best_knn_model.pkl')
+
+# Carregar o modelo de KNN
+#modelo = joblib.load('best_knn_model.pkl')
+
+#usando modelo de arvore de decisão
+modelo = joblib.load('best_decision_tree_model.pkl')
+
+
 
 # Configuração do Swagger UI
 SWAGGER_URL = '/swagger'
