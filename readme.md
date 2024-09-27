@@ -49,11 +49,15 @@ cd frontend
 
 6.2) então acesse a url : http://localhost:8100/ 
 
-6.3 ) A fim de simplificar o teste a função FetchSpotifyData irá preencher o formulário com dados randômicos. Se você deseja testar a função com dados reais da API do spotify basta configurar o arquivo .env com suas credenciais do Spotify Developer conforme a seguir, substituindo XXX pelas respectivas credenciais  : 
+7 ) Opcional  : 
+
+7.1) Se você deseja testar a função de buscar as caracteristicas de uma música através da URL, usando a  API do Spotify, basta configurar o arquivo .env com suas credenciais do Spotify Developer conforme a seguir, substituindo XXX pelas respectivas credenciais  : 
 
 SPOTIFY_CLIENT_ID=XXX
 
 SPOTIFY_CLIENT_SECRET=XXX
+
+7.2 ) Se você não configurar o arquivo .env , os valores serão preenchidos com valores aleatórios. 
     
 
 
