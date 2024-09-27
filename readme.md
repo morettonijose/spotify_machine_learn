@@ -20,6 +20,8 @@ cd backend
 
 ### 2. Crie e ative um ambiente virtual via bash (opcional, mas recomendado)
 
+Observação : Em algumas configurações de ambiente você deverá usar os códigos de comando pip3 e python3 ao invés de pip e python. 
+
 python -m venv venv
 
 source venv/bin/activate  # Para Linux/Mac
@@ -45,7 +47,7 @@ Uma vez que você teve sucesso em visualizar a interface de documentação do Sw
 cd frontend
 
 
-###  6.1 ) no terminal digite : python3 -m http.server 8100
+###  6.1 ) no terminal digite : python -m http.server 8100
 
 ###  6.2) então acesse a url : http://localhost:8100/ 
 
