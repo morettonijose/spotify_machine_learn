@@ -49,6 +49,10 @@ def test_model_accuracy():
     # Verificar se a precisão está acima do threshold
     assert precisao >= PRECISION_THRESHOLD, f'Precisão do modelo {precisao} abaixo do esperado {PRECISION_THRESHOLD}.'
 
+
+
+
+
 # Teste 2: Verificar o F1-Score do modelo
 def test_model_f1_score():
     """Teste para garantir que o F1-Score do modelo está dentro do threshold aceitável."""
@@ -60,6 +64,10 @@ def test_model_f1_score():
 
     # Verificar se o F1-Score está acima do threshold
     assert f1 >= F1_SCORE_THRESHOLD, f'F1-Score do modelo {f1} abaixo do esperado {F1_SCORE_THRESHOLD}.'
+
+
+
+
 
 # Teste 3: Verificar tratamento de dados inválidos
 def test_model_invalid_data():

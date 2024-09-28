@@ -21,7 +21,9 @@ api = Api(app)
 # Carregar o modelo de KNN
 modelo = joblib.load('best_knn_model.pkl')
 
-#usando modelo de arvore de decisão
+#o modelo de arvore de decisão não passou no pytest - verificar o que pode ter ocorrido  pois no notebook do google passou. 
+# Assim vamos seguir com o modelo KNN e estudar porque os dados do pkl exportado para o modelo de arvore de decisão não passou no pytest.
+
 #modelo = joblib.load('best_decision_tree_model.pkl')
 
 
@@ -109,9 +111,11 @@ class FetchSpotifyData(Resource):
             track_url = body.get("url")
             track_id = get_spotify_track_id(track_url)
 
+            #   se a url for vazia, retornar valores aleatórios
             if  track_url =="" :
                 return make_response(gerar_valores_randomicos(), 200)
 
+            # se a url for inválida, retornar erro 400
             if not track_id:
                 return jsonify({'error': 'URL inválida'}), 400
 
