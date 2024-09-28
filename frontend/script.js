@@ -1,11 +1,15 @@
 document.getElementById('predictionForm').addEventListener('submit', async function (e) {
-    e.preventDefault();  // Prevenir o comportamento padrão do formulário
 
+    
+    // Prevenir o comportamento padrão do formulário
+    e.preventDefault();   
 
+    // recupera dados do formulário
     const predictionElement = document.getElementById('prediction');
+    //reseta texto de predição
     predictionElement.textContent = '';
 
-
+    //recupera values do formulário
     const danceability = parseFloat(document.getElementById('danceability').value);
     const energy = parseFloat(document.getElementById('energy').value);
     const tempo = parseFloat(document.getElementById('tempo').value);
@@ -14,10 +18,13 @@ document.getElementById('predictionForm').addEventListener('submit', async funct
     const speechiness = parseFloat(document.getElementById('speechiness').value);
     const valence = parseFloat(document.getElementById('valence').value);
 
+    //monta objeto para envio
     const data = {
         danceability, energy, tempo, loudness, acousticness, speechiness, valence
     };
 
+
+    //tenta realizar a chamada ao endpoint de predição
     try {
         const response = await fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
@@ -53,26 +60,26 @@ document.getElementById('predictionForm').addEventListener('submit', async funct
     } catch (error) {
         document.getElementById('predictionError').textContent = 'Erro: ' + error.message;
     }
+
+
 });
+
+
+
+
 
 // Função para preencher automaticamente com base na URL da música
 document.getElementById('fillButton').addEventListener('click', async function () {
     const musicUrl = document.getElementById('musicUrl').value;
-    const fetchErrorElement = document.getElementById('fetchError');
-
+    const fetchErrorElement = document.getElementById('fetchError'); 
     // Limpar mensagens de erro anteriores
-    fetchErrorElement.textContent = '';
-    
-    // Validação para verificar se o campo URL não está vazio e contém o padrão "track/"
- 
-
+    fetchErrorElement.textContent = ''; 
+    // Validação para verificar se o campo URL não está vazio e contém o padrão "track/" 
     if ( musicUrl && !musicUrl.includes('track/')) {
         fetchErrorElement.textContent = 'A URL deve estar no formato correto e conter "track/". Exemplo: https://open.spotify.com/track/3QpkDyuXdjxhIyLyKtyC6O';
         return;
-    }
-
-
-
+    } 
+    //tenta realizar a chamada ao endpoint de preenchimento
     try {
         const response = await fetch('http://127.0.0.1:5000/fetch_spotify_data', {
             method: 'POST',

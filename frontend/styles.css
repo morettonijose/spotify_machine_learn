@@ -58,11 +58,32 @@ button:hover {
     background-color: #0056b3;
 }
 
+
+.align-center{ text-align:center }
+
+
+
 #errorMessages p {
     color: red;
     font-size: 14px;
     margin-top: 10px;
 }
+
+/* Estilo básico para erros */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Estilo para popularidade */
+p.popular {
+    color: blue;
+}
+
+p.not-popular {
+    color: red;
+}
+
 
 #prediction {
     margin-top: 20px;
@@ -72,20 +93,7 @@ button:hover {
 }
 
  
-    /* Estilo básico para erros */
-    .error {
-        color: red;
-        margin-top: 10px;
-    }
-
-    /* Estilo para popularidade */
-    p.popular {
-        color: blue;
-    }
-
-    p.not-popular {
-        color: red;
-    }
+    
 
 
-    .align-center{ text-align:center }
+
