@@ -52,7 +52,7 @@ No terminal digite :
 cd frontend
 
 
-###  6.1 ) no terminal digite : python -m http.server 8100
+###  6.1 ) na nova janela  do terminal digite : python -m http.server 8100
 
 ###  6.2) então acesse a url : http://localhost:8100/ 
 
